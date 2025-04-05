@@ -13,7 +13,10 @@ module load bioinfo-tools
 module load FastQC
 
 for file in ~/Genome_Analysis_Lab/DATA/raw_data/DNA_short_reads/*.fastq.gz; do
-    folder="output_${file%%.fastq.gz}"
-    mkdir ~/Genome_Analysis_Lab/Analyses/1_preprocessing/fastQC_DNA_raw/"$folder"
-    fastqc -o ~/Genome_Analysis_Lab/Analyses/1_preprocessing/fastQC_DNA_raw/"$folder" file
+    filename=$(basename "$file" .fastq.gz)
+    folder="output_${filename}"
+    output_dir=~/Genome_Analysis_Lab/Analyses/1_preprocessing/fastQC_DNA_raw/"$folder"
+    
+    mkdir -p "$output_dir"
+    fastqc -o "$output_dir" "$file"
 done
