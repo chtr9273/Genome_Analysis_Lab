@@ -24,7 +24,7 @@ done
 for file in DATA/raw_data/RNA_short_reads/*.fastq.gz; do
     filename=$(basename "$file" .fastq.gz)
     folder="output_${filename}"
-    output_dir= Analyses/1_preprocessing/fastQC_RNA_raw/"$folder"
+    output_dir=Analyses/1_preprocessing/fastQC_RNA_raw/"$folder"
     
     mkdir -p "$output_dir"
     fastqc -o "$output_dir" "$file"
