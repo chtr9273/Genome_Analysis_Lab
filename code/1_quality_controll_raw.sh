@@ -7,7 +7,7 @@
 #SBATCH -J Quality_controll_raw
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user christos.tricopoulos.9273@student.uu.se
-#SBATCH --output= code/0_output%x.%j.out
+#SBATCH --output=output%x.%j.out
 
 module load bioinfo-tools
 module load FastQC
