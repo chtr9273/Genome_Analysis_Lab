@@ -1,6 +1,5 @@
 #!/bin/bash -l
 #SBATCH -A uppmax2025-3-3
-#SBATCH --reservation=uppmax2025-3-3_2
 #SBATCH -M snowy
 #SBATCH -p core
 #SBATCH -n 2
