@@ -19,7 +19,7 @@ trimmomatic PE \
     DATA/raw_data/DNA_short_reads/SRR24413065_1.fastq.gz DATA/raw_data/DNA_short_reads/SRR24413065_2.fastq.gz \
     "$output_dir"/out_DNA1_paired.fq.gz "$output_dir"/out_DNA1_unpaired.fq.gz \
     "$output_dir"/out_DNA2_paired.fq.gz "$output_dir"/out_DNA2_unpaired.fq.gz \
-    ILLUMINACLIP:$TRIMMOMATIC_ROOT/adapters/TruSeq3-PE.fa:2:30:10 TRAILING:16 SLIDINGWINDOW:8:15 \
+    ILLUMINACLIP:$TRIMMOMATIC_ROOT/adapters/TruSeq3-PE.fa:2:30:10 LEADING:15 TRAILING:15 SLIDINGWINDOW:4:20 MINLEN:150
 
 for file in DATA/raw_data/RNA_short_reads/*1.fastq.gz; do
     name_without_prefix=$(basename "$file" .fastq.gz | sed 's/_1$//')
