@@ -14,6 +14,6 @@ module load quast
 
 mkdir -p Analyses/2_Genome_Assembly/2_quast_output/
 
-quast assembly.fasta -o Analyses/2_Genome_Assembly/2_quast_output/ \
+quast.py Analyses/2_Genome_Assembly/1_Flye_output/assembly.fasta -o Analyses/2_Genome_Assembly/2_quast_output/ \
 	-r DATA/raw_data/reference_genome/HP126_genome.fasta --threads 2
 
