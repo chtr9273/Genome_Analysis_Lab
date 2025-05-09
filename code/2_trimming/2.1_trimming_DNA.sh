@@ -19,5 +19,5 @@ trimmomatic PE \
     DATA/raw_data/DNA_short_reads/SRR24413065_1.fastq.gz DATA/raw_data/DNA_short_reads/SRR24413065_2.fastq.gz \
     "$output_dir"/out_DNA1_paired.fq.gz "$output_dir"/out_DNA1_unpaired.fq.gz \
     "$output_dir"/out_DNA2_paired.fq.gz "$output_dir"/out_DNA2_unpaired.fq.gz \
-    ILLUMINACLIP:$TRIMMOMATIC_ROOT/adapters/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:50
+    ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:50
 
