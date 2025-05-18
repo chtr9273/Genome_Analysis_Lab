@@ -14,8 +14,6 @@ module load bwa
 module load samtools
 module load Pilon
 
-mkdir -p Analyses/2_Genome_Assembly/3_polishing/BWA_output
-
 bwa index Analyses/2_Genome_Assembly/1_Flye_output/assembly.fasta
 
 bwa mem -t 2 Analyses/2_Genome_Assembly/1_Flye_output/assembly.fasta \
