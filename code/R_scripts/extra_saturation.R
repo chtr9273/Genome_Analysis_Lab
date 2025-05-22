@@ -1,13 +1,3 @@
-#install packages
-
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("edgeR")
-
-#load libraries
-
-
-
 #load counts for each sample
 
 mutated_1 <-  read.table('SRR24516459_counts.txt', header = FALSE, row.names = 1)
