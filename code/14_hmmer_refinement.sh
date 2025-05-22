@@ -16,9 +16,10 @@ mkdir -p Analyses/6_extra_analyses/refinement_hmmer
 
 date
 
-emapper.py -i Analyses/3_Annotation/annotation.faa -o annotation_refinement \
+emapper.py -i Analyses/3_Annotation/with_ref2/annotation_ref.faa -o annotation_refinement \
 	--output_dir Analyses/6_extra_analyses/refinement_hmmer \
-	--cpu 2 --override -m hmmer -d Actinobacteria --decorate_gff Analyses/3_Annotation/annotation_no_fasta.gff \
+	--cpu 2 --override -m hmmer -d Actinobacteria \
+	--decorate_gff Analyses/3_Annotation/with_ref2/annotation_ref_no_fasta.gff \
 	--decorate_gff_ID_field locus_tag --excel
 
 date
