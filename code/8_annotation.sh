@@ -12,6 +12,8 @@
 module load bioinfo-tools
 module load prokka
 
+mkdir -p Analyses/3_Annotation
+
 prokka Analyses/2_Genome_Assembly/3_polishing/pilon_output.fasta \
 	--outdir Analyses/3_Annotation \
 	--prefix annotation 
