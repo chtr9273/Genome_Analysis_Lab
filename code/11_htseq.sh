@@ -20,8 +20,8 @@ for file in /proj/uppmax2025-3-3/nobackup/work/Christos/SR*.bam; do
     
     htseq-count -f bam -t CDS --stranded=yes --idattr=locus_tag \
         /proj/uppmax2025-3-3/nobackup/work/Christos/${file_prefix}aligned.bam \
-        Analyses/3_Annotation/annotation_no_fasta.gff \
-        > Analyses/5_diff_expression/${file_prefix}_counts.txt
+	Analyses/3_Annotation/with_ref2/annotation_ref_no_fasta.gff \
+	> Analyses/5_diff_expression/${file_prefix}_counts.txt
 done
 
 
