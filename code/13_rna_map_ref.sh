@@ -5,8 +5,6 @@
 #SBATCH -n 2
 #SBATCH -t 02:00:00
 #SBATCH -J ref_rna_map
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user christos.tricopoulos.9273@student.uu.se
 #SBATCH --output=output%x.%j.out
 
 module load bioinfo-tools
